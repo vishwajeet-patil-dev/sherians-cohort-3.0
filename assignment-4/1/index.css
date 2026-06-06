@@ -1,0 +1,259 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #f6f6f6;
+  font-family: "Roboto", sans-serif;
+}
+.brdr {
+  border: 1px solid red;
+}
+.container {
+  max-width: 1600px;
+  margin: auto;
+  padding: 20px 10px;
+}
+#parent {
+  height: 100%;
+  display: flex;
+}
+section {
+  flex: 9;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 40% 21% 22% 17%;
+  grid-template-rows: 20% 50% 30%;
+}
+section > div {
+  font-size: 2rem;
+  padding: 10px;
+}
+section .child-1 {
+  grid-column: 1/2;
+  grid-row: 1/4;
+}
+.child-2 {
+  grid-row: 1/2;
+  grid-column: 2/5;
+}
+.child-3 {
+  grid-row: 2/3;
+  grid-column: 2/4;
+}
+.child-4 {
+  grid-row: 2/3;
+  grid-column: 4/5;
+}
+.child-5 {
+  grid-row: 3/4;
+  grid-column: 2/3;
+}
+.child-6 {
+  grid-row: 3/4;
+  grid-column: 3/5;
+}
+.child-1 > div {
+  height: 100%;
+  border-radius: 20px;
+  background-color: #8285d6;
+  position: relative;
+}
+.child-1 > div .about {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #f6f6f6;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 0 0 10px 0;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.hero-image-section-parent {
+  position: relative;
+  top: 40%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  border: 10px solid #f6f6f6;
+  border-radius: 50%;
+  padding: 20px;
+}
+.hero-image-section-parent > div {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-color: #edacff;
+}
+.hero-image-section-parent > img {
+  width: 110%;
+  height: 110%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.child-1 > div .personal-info {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  color: #f6f6f6;
+  font-size: 2.5rem;
+}
+.personal-info span {
+  font-weight: 300;
+}
+.personal-info p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-top: 10px;
+}
+.disk {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+.record {
+  width: 150px;
+  height: 150px;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+.disc {
+  fill: #000;
+  stroke: #222;
+  stroke-width: 2;
+}
+
+.center {
+  fill: white;
+}
+
+.circle-text {
+  fill: white;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+.child-2 h1 {
+  font-weight: 900;
+  font-size: 9vw;
+  line-height: 1;
+  text-align: center;
+}
+.child-3 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.child-4 > div {
+  border-radius: 20px;
+  height: 100%;
+  overflow: hidden;
+}
+.child-4 > div > div {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.child-4 > div > div p {
+  text-align: center;
+}
+.child-4 > div > div p span {
+  font-weight: 800;
+  font-size: 3rem;
+}
+.child-4 > div > div:first-child {
+  background-color: #a9dad7;
+}
+.child-4 > div > div:nth-child(2) {
+  background-color: #8e6fbd;
+}
+.child-5 > div {
+  height: 100%;
+  background-color: #595959;
+  color: #f6f6f6;
+  border-radius: 20px;
+}
+.child-5 > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.child-5 > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.child-5 > div > div > img {
+  height: 80px;
+  width: 80px;
+}
+.child-6 {
+  position: relative;
+}
+.child-6 > div {
+  background-color: #000;
+  border-radius: 20px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.child-6 > div > img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+.child-6 > div:nth-child(2) {
+  background-color: #f8c166;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  height: calc(100% - 20px);
+  width: 60%;
+  text-align: center;
+}
+.child-6 p {
+  font-size: 2rem;
+  width: 60%;
+  font-weight: 400;
+  line-height: 1;
+  text-align: start;
+}
+.child-6 p span {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 900;
+}
+nav {
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  row-gap: 100px;
+  width: 50px;
+  padding: 100px 10px;
+}
+nav > p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  rotate: -90deg;
+  transform-origin: top;
+}
