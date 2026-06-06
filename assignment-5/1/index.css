@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+}
+.brdr {
+  border: 1px solid red;
+}
+.container {
+  max-width: 1600px;
+  margin: auto;
+  padding: 20px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h3 {
+  font-size: 3rem;
+}
+header p {
+  border: 1px solid gray;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+section {
+  height: 140vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+section > div > .image {
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+  position: relative;
+}
+section > div > .image > img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+section > div > .image > img:hover {
+  animation: scale 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.details h4 {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.details p {
+  padding: 5px 10px;
+  border: 1px solid gray;
+  border-radius: 20px;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+@keyframes scale {
+  0% {
+    scale: 1;
+    top: 50%;
+    left: 50%;
+  }
+  100% {
+    top: 55%;
+    left: 55%;
+    scale: 1.1;
+  }
+}
